@@ -1,0 +1,30 @@
+Q1:
+These works are searched by multi-trial NAS methods [62, 91, 2, 88, 11, 47], which are computationally prohibitive (costing thousands of GPU days).
+- What is multi-trail NAS methods?
+
+Q2:
+Recent weight-sharing NAS methods [6, 52, 4, 43] encode the entire search space as a weight-sharing supernet to avoid repetitive training of candidate networks, thus largely reducing the search cost.
+- What is weight-sharing NAS methods?
+
+Q3:
+- What is unsupervised NAS?
+
+Q4:
+- One-shot learning for reduce training time?
+
+F1:
+  Weight-sharing rating scheme in one-shot NAS learning methods
+  先整合一个weight-sharing supernet for all candidate architectures.
+  再去训练这个supernet的weights，从中找到一个使得 L_train 最小的 weight W.
+  L_val 虽然是 rating metric，但它和 loss 是一样的.
+  然后在保持 W 不变的情况下，训练各个 architecture 来找到 L_val 最小的那个.
+  
+F2：
+  Block-wise solution
+  为了解决 weight-sharing 方法中的问题，有研究发现减小weight-sharing space 可以提高正确率
+  把 supernet 分成多个 block，而不是把它视作一个整体，每个 block 单独训练.
+  一开始要训练好一个 teacher model，然后第 k 个 block 的输入 x_k 和输出 y_k 由 teacher model 的第 k 层产生、
+  但是这个方法会有一些问题：用 teacher model 来训练，block 会很接近 teacher model 或者 block 的输出和 teacher model 的 correlation 很高，不利于 generalization
+
+F3：
+  
