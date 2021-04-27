@@ -28,3 +28,8 @@ F2：
 
 F3：
   
+Q5：
+- What is Siamese supernets?
+
+q6:
+- Evolutionary algorithm search?
