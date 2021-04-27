@@ -27,9 +27,46 @@ F2：
   但是这个方法会有一些问题：用 teacher model 来训练，block 会很接近 teacher model 或者 block 的输出和 teacher model 的 correlation 很高，不利于 generalization
 
 F3：
+  siamese network
+  设计一个孪生网络，这个网络第 t 层的权重 W*(t) = (1-a)W*(t-1) + aW(t) （相当于是前一层更新后的权重和当前层更新前的权重的加权）
+  
+  
   
 Q5：
 - What is Siamese supernets?
 
 q6:
 - Evolutionary algorithm search?
+
+q7:
+- EMA 网络是预训练好的吗？如果不是的话，为什么要使得online supernet能够产生接近probability ensemble of all sampled networks in the EMA supernet的结果？
+
+q7:
+- 使用 temporal average weight / exponantial moving average 的 intuition 是什么？为什么这个可以用于帮助训练模型？
+
+q8:
+- q7是否和self-supervised contrastive learning （自监督类比学习）有关？
+- self-supervised contrastive learning 是否会遇到同 class 不同 object feature vector distance 很远的问题？
+
+q9:
+- How are the blocks selected? Any standard?
+
+q10:
+- 文章有提到对BOTBLOCK做了一个改动（removing the content-position branch from BOTBLOCK）可以获得和resconv block接近的计算时间，这个计算时间是怎么测算的？
+
+q11:
+- Position encoding is not clear. How the light depthwise separable convolution works as an implicit position encoding? position encoding should only be calculated from word order or spatial relationship?
+- How does the big O nonation come?
+
+q12:
+- search on known search space 是NAS的常见search方式吗？
+
+Q13:
+DNA是指的它的search strategy吗？
+
+F4:
+- MBConv search space / HyTra search space / NATS-Bench
+- DNA / EfficientNet / BossNAS
+做measurement的时候是将别人的search strategy复现吗？
+
+
