@@ -1,4 +1,5 @@
 1.  Apply NAS on multimodal tasks
     Details to be discussed
+    Changlin: Vision Transformer can be a prospect
     
-2. 
+2. Introduce Mutual Information Maximazation (MIM) into Unsupervised Learning NAS
