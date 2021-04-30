@@ -3,3 +3,5 @@
     Changlin: Vision Transformer can be a prospect
     
 2. Introduce Mutual Information Maximazation (MIM) into Unsupervised Learning NAS
+
+3. Use Graph Neural Networks to supernet 
