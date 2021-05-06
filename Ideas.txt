@@ -7,3 +7,5 @@
 3. Use Graph Neural Networks to supernet. Regard the whole supernet as a graph, search the best way on supernet
 
 4. Use A* algorithm for searching?
+
+5. Why DNA used DFS, but BossNAS turned back to evolutionary algorithm? Since BossNAS adopts block-wise training, the DFS should also work?
