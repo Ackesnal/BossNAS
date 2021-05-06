@@ -5,3 +5,5 @@
 2. Introduce Mutual Information Maximazation (MIM) into Unsupervised Learning NAS
 
 3. Use Graph Neural Networks to supernet. Regard the whole supernet as a graph, search the best way on supernet
+
+4. Use A* algorithm for searching?
