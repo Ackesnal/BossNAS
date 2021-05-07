@@ -9,3 +9,6 @@
 4. Use A* algorithm for searching?
 
 5. Why DNA used DFS, but BossNAS turned back to evolutionary algorithm? Since BossNAS adopts block-wise training, the DFS should also work?
+    - Because DFS can't guarantee the global optimal. Even if the i-th path in the k-th block does not lead to regional best, but it may be more suitable for the following j-th block, where j>k, and thus results in a better performance.
+    
+6. Develop a NAS to create operations beyond pre-defined search space?
