@@ -12,3 +12,15 @@
     - Because DFS can't guarantee the global optimal. Even if the i-th path in the k-th block does not lead to regional best, but it may be more suitable for the following j-th block, where j>k, and thus results in a better performance.
     
 6. Develop a NAS to create operations beyond pre-defined search space?
+
+How to prove the searched model is the optimal if the training set and search set is different?
+
+minimize the network? effficiency? or less training time? which standard is most important for NAS?
+
+supernet bias?
+
+NAS networks do not get the best place in ImageNet Search, why do we use them?
+
+Network weights or structures are dataset-sensitive, e.g., optimal network on CIFAR may not be optimal on ImageNET (or VQA-CP case). Is it possible to make the network learn to construct architecture based on the dataset? Or, is it possible to make the network searched by NAS learn when to retrain itself based on online given data.
+
+Meta-learning for selection
