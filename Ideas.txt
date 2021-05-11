@@ -33,3 +33,4 @@ EfficientNet可以达到97.1%的top-5 accuracy
 3. 尝试让NAS可以生成规定之外的operation或者新的architecture
 4. 提出更全面的performance measurement
 5. 尝试让NAS生成的网络能根据输入数据来变化，或者是通过输入的数据来让NAS评判是否需要重新生成网络。因为NAS的training和searching都是dataset sensitive的，dataset的不一样会很大程度上影响最后的architecture
+6. CVPR2021有一篇纯粹使用VGG的paper，至简注意
