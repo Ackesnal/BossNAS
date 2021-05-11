@@ -24,3 +24,12 @@ NAS networks do not get the best place in ImageNet Search, why do we use them?
 Network weights or structures are dataset-sensitive, e.g., optimal network on CIFAR may not be optimal on ImageNET (or VQA-CP case). Is it possible to make the network learn to construct architecture based on the dataset? Or, is it possible to make the network searched by NAS learn when to retrain itself based on online given data.
 
 Meta-learning for selection
+
+EfficientNet可以达到97.1%的top-5 accuracy
+
+未来的发展、感觉有东西可以做的地方：
+1. 对Vision Transformer做NAS （需要读和vision transformer相关的文章
+2. 把整个Supernet看成一个网络，使用图神经网络的方式来检索 （需要读和GNN或者GCN有关的文章
+3. 尝试让NAS可以生成规定之外的operation或者新的architecture
+4. 提出更全面的performance measurement
+5. 尝试让NAS生成的网络能根据输入数据来变化，或者是通过输入的数据来让NAS评判是否需要重新生成网络。因为NAS的training和searching都是dataset sensitive的，dataset的不一样会很大程度上影响最后的architecture
