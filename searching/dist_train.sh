@@ -4,7 +4,7 @@
 #SBATCH -c 4
 #SBATCH -o output.txt
 #SBATCH -e error.txt
-#SBATCH --mem-per-cpu=30G
+#SBATCH --mem-per-cpu=10G
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:tesla-smx2:4
 
