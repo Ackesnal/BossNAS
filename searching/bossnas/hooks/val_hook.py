@@ -460,6 +460,7 @@ class ValNATSPathHook(Hook):
                                                            forward_op=forward_bestpath_)[0]
 
                     channel_fix_op = forward_bestpath[-1]
+                    
                     proj_target_v1 = model.target_neck(tuple([model.target_channel_fix[channel_fix_op]
                                                               (model.target_backbone(img_v1,
                                                                              start_block=model.start_block,

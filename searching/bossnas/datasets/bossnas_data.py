@@ -29,6 +29,8 @@ class StoragedBYOLDataset(Dataset):
     def __getitem__(self, idx):
         if idx not in self.storage:
             img = self.data_source.get_sample(idx)
+            if type(img)==tuple:
+                img = img[0]
             img1 = self.pipeline1(img)
             img2 = self.pipeline2(img)
             if self.prefetch:
