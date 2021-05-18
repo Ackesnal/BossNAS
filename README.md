@@ -51,7 +51,7 @@ Illustration of the fabric-like Hybrid CNN-transformer Search Space with flexibl
   ```shell
   git clone https://github.com/NVIDIA/apex.git
   cd apex
-  pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+  python3 setup.py install
   ```
 - Install [pytorch-image-models 0.3.2](https://github.com/rwightman/pytorch-image-models), for example:
   ```shell

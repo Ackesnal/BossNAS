@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
+
 PYTHON=${PYTHON:-"python"}
 
 CFG=$1
