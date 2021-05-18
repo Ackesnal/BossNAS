@@ -205,6 +205,7 @@ def build_optimizer(model, optimizer_cfg):
 
 def _dist_train(model, dataset, cfg, logger=None, timestamp=None, meta=None):
     # prepare data loaders
+    
     dataset = dataset if isinstance(dataset, (list, tuple)) else [dataset]
     data_loaders = [
         build_dataloader(
@@ -250,6 +251,7 @@ def _dist_train(model, dataset, cfg, logger=None, timestamp=None, meta=None):
     runner.register_training_hooks(cfg.lr_config, optimizer_config,
                                    cfg.checkpoint_config, cfg.log_config)
     runner.register_hook(DistSamplerSeedHook())
+    
     # register custom hooks
     for hook in cfg.get('custom_hooks', ()):
         if hook.type == 'DeepClusterHook':

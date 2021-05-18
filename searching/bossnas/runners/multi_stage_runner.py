@@ -152,6 +152,7 @@ class MultiStageRunner(EpochBasedRunner):
                             'and "model.val_step()" must return a dict')
         if 'log_vars' in outputs:
             self.log_buffer.update(outputs['log_vars'], outputs['num_samples'])
+        
         self.log_buffer.update({'Stage': self.stage})
         self.outputs = outputs
 

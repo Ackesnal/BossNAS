@@ -119,7 +119,6 @@ def main():
         assert isinstance(args.pretrained, str)
         cfg.model.pretrained = args.pretrained
     model = build_model(cfg.model)
-
     datasets = [build_dataset(cfg.data.train)]
     assert len(cfg.workflow) == 1, "Validation is called by hook."
     if cfg.checkpoint_config is not None:
